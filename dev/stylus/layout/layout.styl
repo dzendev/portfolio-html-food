@@ -1,0 +1,58 @@
+/*!-----------------------------------------------------------------
+	layout.pug - базовый шаблон
+ -----------------------------------------------------------------*/
+// отступ по бокам
+.l-padding
+	padding 40px 100px
+	+mema(sizeExtraLarge)
+		padding 20px 20px
+
+#l-header
+	@extend .l-padding
+	position fixed
+	top 0
+	left 0
+	z-index 1000
+	display flex
+	justify-content space-between
+	align-items center
+	transition .5s
+	width 100%
+	#l-logo
+		color var(--colorWhite)
+		font-weight 900
+		font-size 2rem
+		text-decoration none
+		position relative
+		z-index 2
+		&:hover
+			text-decoration none
+		span
+			color var(--colorPink)
+		+mema(sizeMedium)
+			&.is-toggle
+				color var(--colorBlack)
+	&.is-sticky
+		background var(--colorWhite)
+		padding 20px 100px
+		box-shadow 0 5px 20px rgba(0, 0, 0, .05)
+		#l-logo
+			color var(--colorBlack)
+		+mema(sizeExtraLarge)
+			padding 20px 20px
+
+#l-content
+	flex: 1
+	padding-bottom: 20px
+
+#l-footer
+	@extend .l-padding
+	padding-top 10px
+	padding-bottom 10px
+	border-top 1px solid rgba(0, 0, 0, .1)
+	text-align center
+	color #333
+	p
+		margin-bottom 0
+		a
+			font-weight 700

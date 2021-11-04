@@ -1,0 +1,46 @@
+/*!-----------------------------------------------------------------
+	.alert - модуль предупреждений
+ -----------------------------------------------------------------*/
+.alert
+	padding: .75rem 2rem .75rem 1.25rem
+	margin-bottom: 1rem
+	border: 1px solid #eee
+	border-radius: .25rem
+	position: relative
+	> .fa-close
+		cursor: pointer
+		position absolute
+		transform-style: preserve-3d
+		top: 50%
+		right 1rem
+		transform: translate(0%, -50%)
+	a
+		text-decoration underline
+	&.is-danger
+		background-color: $theme.default.isDanger.bgColor
+		border-color: lightness($theme.default.isDanger.borderColor, 85%)
+		color: $theme.default.isDanger.color
+		a
+		a:hover
+			color $theme.default.isDanger.color
+	&.is-success
+		background-color: $theme.default.isSuccess.bgColor
+		border-color: lightness($theme.default.isSuccess.borderColor, 85%)
+		color: $theme.default.isSuccess.color
+		a
+		a:hover
+			color $theme.default.isSuccess.color
+	&.is-warning
+		background-color: $theme.default.isWarning.bgColor
+		border-color: lightness($theme.default.isWarning.borderColor, 88%)
+		color: $theme.default.isWarning.color
+		a
+		a:hover
+			color $theme.default.isWarning.color
+	&.is-info
+		background-color: $theme.default.isInfo.bgColor
+		border-color: lightness($theme.default.isInfo.borderColor, 85%)
+		color: $theme.default.isInfo.color
+		a
+		a:hover
+			color $theme.default.isInfo.color

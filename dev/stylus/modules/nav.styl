@@ -1,0 +1,39 @@
+/*!-----------------------------------------------------------------
+  .nav - модуль навигации
+ -----------------------------------------------------------------*/
+.nav
+	margin 0
+	padding 0
+	display flex
+	+mema(sizeMedium)
+		display none
+		&.is-show
+			size 100% 100%
+			position fixed
+			top 0
+			left 0
+			flex-direction column
+			display flex
+			justify-content center
+			z-index 1
+			align-items center
+			background #fff
+	> a
+		text-decoration none
+		margin-left 30px
+		font-weight 500
+		color var(--colorWhite)
+		&:hover
+			color var(--colorPink)
+		.is-sticky &
+			color var(--colorBlack)
+			&:hover
+				color var(--colorPink)
+		+mema(sizeMedium)
+			margin 10px 0
+			font-size 1.6rem
+			color var(--colorBlack)
+			&:hover
+				color var(--colorPink)
+
+

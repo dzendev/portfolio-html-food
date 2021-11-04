@@ -1,0 +1,127 @@
+/*!
+ *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ * Default Theme
+ *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+/*-----------------------------------------------------------------
+	Подключение шрифтов
+ -----------------------------------------------------------------*/
+// fontFace(SegoeUIBold)
+// fontFace(SegoeUIItalic)
+// fontFace(SegoeUILight)
+// fontFace(SegoeUIRegular)
+// fontFace(SegoeUISemiBold)
+/*-----------------------------------------------------------------
+	Переменные. Ипользуются theme, modules и state
+ -----------------------------------------------------------------*/
+:root
+	--fontSize: 16px
+	--fontFamily: 'Raleway'\, sans-serif
+	--fontColor: #000
+	--fontLineHeight: 1.5em
+	--colorPink: #ff0157
+	--colorWhite: #ffffff
+	--colorBlack: #111111
+	--linkColor: var(--colorPink)
+	--linkColorHover: var(--colorPink)
+	--linkColorFocus: var(--colorPink)
+/*!-----------------------------------------------------------------
+	Типографика
+ -----------------------------------------------------------------*/
+html
+	font-size var(--fontSize)
+body
+	font-family: var(--fontFamily)
+	color var(--fontColor)
+	line-height: var(--fontLineHeight)
+h1, h2, h3, h4, h5, h6
+	font-weight 700
+	line-height 1.1
+	margin 0 0 .42rem 0
+h1
+	font-size 3rem
+h2
+	font-size 2rem
+h3
+	font-size 1.6rem
+h4
+	font-size 1.4rem
+h5
+	font-size 1.2rem
+h6
+	font-size 1rem
+h1 .is-large, h2 .is-large, h3 .is-large, h4 .is-large, h5 .is-large, h6 .is-large
+	// font-weight 900
+	// font-size 1.5em
+	font-weight 800
+	color var(--colorPink)
+p
+	font-size 1.1rem
+	font-weight 500
+	color var(--colorBlack)
+	margin 0 0 10px
+	line-height 1.428
+ul
+	font-size 1.1rem
+	padding-left: 1rem
+ol
+	font-size 1.1rem
+	padding-left: .3rem
+	counter-reset: item
+	li
+		display: block
+		&:before
+			content: counters(item, ".") "."
+			counter-increment: item
+			position: relative
+			left: -5px
+abbr[title]
+	font-size 1.1429rem
+	cursor help
+	border-bottom 1px dotted #777
+	text-decoration none
+address
+	font-size 1.1429rem
+	font-style normal
+html[lang="ru"] q
+	quotes: '«' '»'
+/*!-----------------------------------------------------------------
+	Ссылки
+ -----------------------------------------------------------------*/
+a
+	color var(--linkColor)
+	text-decoration none
+	&:focus
+		color var(--linkColorFocus)
+		text-decoration: underline
+	&:hover
+		color var(--linkColorHover)
+		text-decoration: underline
+/*!-----------------------------------------------------------------
+	Таблицы
+ -----------------------------------------------------------------*/
+table
+	background-color transparent
+	margin-bottom 20px
+	border-spacing 0
+	border-collapse collapse
+	width: 100%
+	max-width: 100%
+	+mema(700px)
+		display: block
+		overflow-x: auto
+td, th
+	padding .2rem 0.75rem
+	border 1px solid #eceeef
+th
+	text-align left
+/*!-----------------------------------------------------------------
+	Адаптивные картинки
+ -----------------------------------------------------------------*/
+img
+	max-width 100%
+	height auto
+figcaption
+	font-size 1.1429rem
+	text-align center
+	font-style: italic
